@@ -1,0 +1,74 @@
+<!doctype html>
+<hmtl>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <!-- html fo  imput boxes -->
+  
+integer: <input type="number" id= "num1"> 
+integer: <input type="number" id= "num2"> 
+<p></p>
+<button id= "add" >+</button>
+<button id= "subtract">-</button>
+<button id= "multiply">X</button>
+<button id= "divide">/</button>
+<p></p>
+
+
+
+<label>Your Answer: </label>
+<p><span id='display'></span> </p>
+<!-- end html imput box -->
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+   <script>
+  $(document).ready(function(){
+    var $add = $("#add");
+    var $subtract = $("#subtract");
+    var $multiply = $("#multiply");
+    var $divide = $("#divide");
+    var $num1;
+    var $num2;
+    var $math;
+    var $Answer;
+    
+    function variables(){
+      $num1 = $("#num1").val();
+      $num2 = $("#num2").val();
+      $math = $("#math").val();
+    }
+
+    $add.click(function(){
+      variables();
+      console.log ($num1);
+      $Answer= parseInt($num1) + parseInt($num2);  
+      $("span").html($Answer); 
+   
+    })
+
+    $subtract.click(function(){
+      variables();
+      console.log ($num1);
+      $Answer= ($num1 - $num2);
+      $("span").html($Answer); 
+    })
+
+    $multiply.click(function(){
+      variables();
+      console.log ($num1);
+      $Answer= ($num1 * $num2); 
+      $("span").html($Answer); 
+    })
+
+    $divide.click(function(){
+      variables();
+      console.log ($num1);
+      $Answer= ($num1/$num2);
+      $("span").html($Answer); 
+    })
+  })
+  </script>
+</body>
+</html> 
